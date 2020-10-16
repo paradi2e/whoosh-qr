@@ -1,0 +1,6 @@
+framework module Pods_Whoosh_QR_Scanner {
+  umbrella header "Pods-Whoosh QR Scanner-umbrella.h"
+
+  export *
+  module * { export * }
+}

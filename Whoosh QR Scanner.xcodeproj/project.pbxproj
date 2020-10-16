@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7EDCEAC100C17516ECC675B /* Pods_Whoosh_QR_Scanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF1D41A40BACB2F89CCC32A /* Pods_Whoosh_QR_Scanner.framework */; };
 		DF3145AA2539D1F200B1087C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145A92539D1F200B1087C /* AppDelegate.swift */; };
 		DF3145AC2539D1F200B1087C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145AB2539D1F200B1087C /* SceneDelegate.swift */; };
 		DF3145AE2539D1F200B1087C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145AD2539D1F200B1087C /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3DF1D41A40BACB2F89CCC32A /* Pods_Whoosh_QR_Scanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whoosh_QR_Scanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		637E168FA252387B92A2554F /* Pods-Whoosh QR Scanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whoosh QR Scanner.debug.xcconfig"; path = "Target Support Files/Pods-Whoosh QR Scanner/Pods-Whoosh QR Scanner.debug.xcconfig"; sourceTree = "<group>"; };
+		7269B7437F6FC6BD8C4386CB /* Pods-Whoosh QR Scanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whoosh QR Scanner.release.xcconfig"; path = "Target Support Files/Pods-Whoosh QR Scanner/Pods-Whoosh QR Scanner.release.xcconfig"; sourceTree = "<group>"; };
 		DF3145A62539D1F200B1087C /* Whoosh QR Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whoosh QR Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3145A92539D1F200B1087C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF3145AB2539D1F200B1087C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7EDCEAC100C17516ECC675B /* Pods_Whoosh_QR_Scanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11656A0D4BE9B3A005994D7F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DF1D41A40BACB2F89CCC32A /* Pods_Whoosh_QR_Scanner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		71461B982720476715438348 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				637E168FA252387B92A2554F /* Pods-Whoosh QR Scanner.debug.xcconfig */,
+				7269B7437F6FC6BD8C4386CB /* Pods-Whoosh QR Scanner.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DF31459D2539D1F200B1087C = {
 			isa = PBXGroup;
 			children = (
 				DF3145A82539D1F200B1087C /* Whoosh QR Scanner */,
 				DF3145A72539D1F200B1087C /* Products */,
+				71461B982720476715438348 /* Pods */,
+				11656A0D4BE9B3A005994D7F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DF3145BA2539D1F700B1087C /* Build configuration list for PBXNativeTarget "Whoosh QR Scanner" */;
 			buildPhases = (
+				2DD895CF639E0B3247396FC1 /* [CP] Check Pods Manifest.lock */,
 				DF3145A22539D1F200B1087C /* Sources */,
 				DF3145A32539D1F200B1087C /* Frameworks */,
 				DF3145A42539D1F200B1087C /* Resources */,
+				3739E7D2A1F16EF71BBED000 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2DD895CF639E0B3247396FC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Whoosh QR Scanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3739E7D2A1F16EF71BBED000 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Whoosh QR Scanner/Pods-Whoosh QR Scanner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Whoosh QR Scanner/Pods-Whoosh QR Scanner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Whoosh QR Scanner/Pods-Whoosh QR Scanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DF3145A22539D1F200B1087C /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		DF3145BB2539D1F700B1087C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 637E168FA252387B92A2554F /* Pods-Whoosh QR Scanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		DF3145BC2539D1F700B1087C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7269B7437F6FC6BD8C4386CB /* Pods-Whoosh QR Scanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
