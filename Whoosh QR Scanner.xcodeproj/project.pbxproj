@@ -3,17 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		C7EDCEAC100C17516ECC675B /* Pods_Whoosh_QR_Scanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF1D41A40BACB2F89CCC32A /* Pods_Whoosh_QR_Scanner.framework */; };
 		DF3145AA2539D1F200B1087C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145A92539D1F200B1087C /* AppDelegate.swift */; };
-		DF3145AC2539D1F200B1087C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145AB2539D1F200B1087C /* SceneDelegate.swift */; };
-		DF3145AE2539D1F200B1087C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145AD2539D1F200B1087C /* ViewController.swift */; };
-		DF3145B12539D1F300B1087C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF3145AF2539D1F300B1087C /* Main.storyboard */; };
 		DF3145B32539D1F700B1087C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF3145B22539D1F700B1087C /* Assets.xcassets */; };
 		DF3145B62539D1F700B1087C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF3145B42539D1F700B1087C /* LaunchScreen.storyboard */; };
+		DF3145C32539D4BE00B1087C /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145C22539D4BE00B1087C /* ScannerViewController.swift */; };
+		DF3145CA2539D8F100B1087C /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145C92539D8F100B1087C /* Configuration.swift */; };
+		DF3145CD2539D96300B1087C /* Scooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145CC2539D96300B1087C /* Scooter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +22,12 @@
 		7269B7437F6FC6BD8C4386CB /* Pods-Whoosh QR Scanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whoosh QR Scanner.release.xcconfig"; path = "Target Support Files/Pods-Whoosh QR Scanner/Pods-Whoosh QR Scanner.release.xcconfig"; sourceTree = "<group>"; };
 		DF3145A62539D1F200B1087C /* Whoosh QR Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whoosh QR Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3145A92539D1F200B1087C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DF3145AB2539D1F200B1087C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DF3145AD2539D1F200B1087C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DF3145B02539D1F300B1087C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF3145B22539D1F700B1087C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF3145B52539D1F700B1087C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF3145B72539D1F700B1087C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF3145C22539D4BE00B1087C /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		DF3145C92539D8F100B1087C /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		DF3145CC2539D96300B1087C /* Scooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scooter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,6 @@
 				637E168FA252387B92A2554F /* Pods-Whoosh QR Scanner.debug.xcconfig */,
 				7269B7437F6FC6BD8C4386CB /* Pods-Whoosh QR Scanner.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -82,12 +81,12 @@
 			isa = PBXGroup;
 			children = (
 				DF3145A92539D1F200B1087C /* AppDelegate.swift */,
-				DF3145AB2539D1F200B1087C /* SceneDelegate.swift */,
-				DF3145AD2539D1F200B1087C /* ViewController.swift */,
-				DF3145AF2539D1F300B1087C /* Main.storyboard */,
 				DF3145B22539D1F700B1087C /* Assets.xcassets */,
 				DF3145B42539D1F700B1087C /* LaunchScreen.storyboard */,
 				DF3145B72539D1F700B1087C /* Info.plist */,
+				DF3145C22539D4BE00B1087C /* ScannerViewController.swift */,
+				DF3145C92539D8F100B1087C /* Configuration.swift */,
+				DF3145CC2539D96300B1087C /* Scooter.swift */,
 			);
 			path = "Whoosh QR Scanner";
 			sourceTree = "<group>";
@@ -153,7 +152,6 @@
 			files = (
 				DF3145B62539D1F700B1087C /* LaunchScreen.storyboard in Resources */,
 				DF3145B32539D1F700B1087C /* Assets.xcassets in Resources */,
-				DF3145B12539D1F300B1087C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,23 +204,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF3145AE2539D1F200B1087C /* ViewController.swift in Sources */,
+				DF3145CA2539D8F100B1087C /* Configuration.swift in Sources */,
 				DF3145AA2539D1F200B1087C /* AppDelegate.swift in Sources */,
-				DF3145AC2539D1F200B1087C /* SceneDelegate.swift in Sources */,
+				DF3145C32539D4BE00B1087C /* ScannerViewController.swift in Sources */,
+				DF3145CD2539D96300B1087C /* Scooter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DF3145AF2539D1F300B1087C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DF3145B02539D1F300B1087C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DF3145B42539D1F700B1087C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -357,7 +348,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N58RDF6FU9;
+				DEVELOPMENT_TEAM = 66B6DJ7RZU;
 				INFOPLIST_FILE = "Whoosh QR Scanner/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -377,7 +368,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N58RDF6FU9;
+				DEVELOPMENT_TEAM = 66B6DJ7RZU;
 				INFOPLIST_FILE = "Whoosh QR Scanner/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
