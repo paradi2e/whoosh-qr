@@ -8,6 +8,6 @@ target 'Whoosh QR Scanner' do
   # Pods for Whoosh QR Scanner
 
     pod 'SnapKit', '~> 5.0.0'
-
+    pod 'Alamofire', '~> 5.2'
 
 end
