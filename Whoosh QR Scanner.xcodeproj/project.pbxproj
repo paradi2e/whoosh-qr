@@ -17,6 +17,7 @@
 		DF3145D42539DE5500B1087C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145D32539DE5500B1087C /* NetworkService.swift */; };
 		DF3145D72539E23B00B1087C /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145D62539E23B00B1087C /* StatusViewController.swift */; };
 		DF3145DA2539E30000B1087C /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145D92539E30000B1087C /* Observable.swift */; };
+		DF3145DD2539F40A00B1087C /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145DC2539F40900B1087C /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		DF3145D32539DE5500B1087C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		DF3145D62539E23B00B1087C /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
 		DF3145D92539E30000B1087C /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		DF3145DC2539F40900B1087C /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				DF3145D32539DE5500B1087C /* NetworkService.swift */,
 				DF3145D62539E23B00B1087C /* StatusViewController.swift */,
 				DF3145D92539E30000B1087C /* Observable.swift */,
+				DF3145DC2539F40900B1087C /* Reachability.swift */,
 			);
 			path = "Whoosh QR Scanner";
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				DF3145DA2539E30000B1087C /* Observable.swift in Sources */,
 				DF3145C32539D4BE00B1087C /* ScannerViewController.swift in Sources */,
 				DF3145D72539E23B00B1087C /* StatusViewController.swift in Sources */,
+				DF3145DD2539F40A00B1087C /* Reachability.swift in Sources */,
 				DF3145CD2539D96300B1087C /* Scooter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
