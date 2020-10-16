@@ -53,6 +53,7 @@ class ScannerViewController: UIViewController {
     
     // MARK: - Private methods
     
+    /// Проверка доступа к интернету.
     private func checkInternet() {
         if (Reachability.isConnectedToNetwork() != true) {
             let ac = UIAlertController(
@@ -65,6 +66,7 @@ class ScannerViewController: UIViewController {
         }
     }
     
+    /// Конфигурация сессии захвата видео
     private func configureSession() {
         captureSession = AVCaptureSession()
         
@@ -105,6 +107,7 @@ class ScannerViewController: UIViewController {
         captureSession.startRunning()
     }
     
+    /// Алёрт в случае отсутствии камеры у устройства
     private func failed() {
         let ac = UIAlertController(title: "Сканирование не поддерживается", message: "Упс, видимо у тебя нету камеры. Нужно устройство с камерой", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default))
@@ -112,10 +115,12 @@ class ScannerViewController: UIViewController {
         captureSession = nil
     }
     
-    private func found(code: String) {
-        
+    /// При успешном считывании QR-кода
+    /// - Parameter code: стринговое содержимое QR-кода
+    private func success(code: String) {
         let wordToRemove = Configuration.filterString
         var number = code
+        // удаляем из строки всё, кроме кода самоката
         if let range = number.range(of: wordToRemove) {
             number.removeSubrange(range)
         }
@@ -131,6 +136,7 @@ class ScannerViewController: UIViewController {
         present(ac, animated: true)
     }
     
+    /// Открывается контроллер с двумя лейблами о состоянии самоката
     private func openStatusController() {
         let statusController = StatusViewController()
         navigationController?.pushViewController(statusController, animated: true)
@@ -154,7 +160,7 @@ extension ScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
                 }))
                 present(ac, animated: true)
             }
-            found(code: stringValue)
+            success(code: stringValue)
         }
     }
 }
