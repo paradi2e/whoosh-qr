@@ -16,9 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        window?.rootViewController = ScannerViewController()
+        window?.rootViewController = setupFirstController()
         return true
     }
-
+    
+    private func setupFirstController() -> UIViewController {
+        let vc = ScannerViewController()
+        let nc = UINavigationController(rootViewController: vc)
+        return nc
+    }
 }
 

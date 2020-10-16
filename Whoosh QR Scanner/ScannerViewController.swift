@@ -108,13 +108,19 @@ class ScannerViewController: UIViewController {
         }
         Configuration.scooterNumber = number
         let ac = UIAlertController(title: "Самокат обнаружен", message: "Это самокат номер \(number)", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "Отмена", style: .cancel, handler: { (_) in
+        ac.addAction(UIAlertAction(title: "Cканировать другой QR-code", style: .cancel, handler: { [weak self] (_) in
             ac.dismiss(animated: true, completion: nil)
+            self?.captureSession.startRunning()
         }))
-        ac.addAction(UIAlertAction(title: "Получить статус?", style: .default, handler: { (_) in
-            ac.dismiss(animated: true, completion: nil)
+        ac.addAction(UIAlertAction(title: "Получить статус?", style: .default, handler: { [weak self] (_) in
+            self?.openStatusController()
         }))
         present(ac, animated: true)
+    }
+    
+    private func openStatusController() {
+        let statusController = StatusViewController()
+        navigationController?.pushViewController(statusController, animated: true)
     }
 }
 
@@ -128,14 +134,14 @@ extension ScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
             guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
             guard let stringValue = readableObject.stringValue else { return }
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-            if !stringValue.contains("https://whoosh.app.link/scooter?scooter_code") {
+            if !stringValue.contains(Configuration.filterString) {
                 let ac = UIAlertController(title: "Не тот QR-code", message: "Я умею обрабатывать только QR коды компании Whoosh", preferredStyle: .alert)
-                ac.addAction(UIAlertAction(title: "OK", style: .default))
+                ac.addAction(UIAlertAction(title: "Cканировать другой QR-code", style: .default, handler: { [weak self] (_) in
+                    self?.captureSession.startRunning()
+                }))
                 present(ac, animated: true)
-                captureSession = nil
             }
             found(code: stringValue)
         }
-        dismiss(animated: true)
     }
 }

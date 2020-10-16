@@ -14,6 +14,9 @@
 		DF3145C32539D4BE00B1087C /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145C22539D4BE00B1087C /* ScannerViewController.swift */; };
 		DF3145CA2539D8F100B1087C /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145C92539D8F100B1087C /* Configuration.swift */; };
 		DF3145CD2539D96300B1087C /* Scooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145CC2539D96300B1087C /* Scooter.swift */; };
+		DF3145D42539DE5500B1087C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145D32539DE5500B1087C /* NetworkService.swift */; };
+		DF3145D72539E23B00B1087C /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145D62539E23B00B1087C /* StatusViewController.swift */; };
+		DF3145DA2539E30000B1087C /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145D92539E30000B1087C /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		DF3145C22539D4BE00B1087C /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		DF3145C92539D8F100B1087C /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		DF3145CC2539D96300B1087C /* Scooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scooter.swift; sourceTree = "<group>"; };
+		DF3145D32539DE5500B1087C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		DF3145D62539E23B00B1087C /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		DF3145D92539E30000B1087C /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,9 @@
 				DF3145C22539D4BE00B1087C /* ScannerViewController.swift */,
 				DF3145C92539D8F100B1087C /* Configuration.swift */,
 				DF3145CC2539D96300B1087C /* Scooter.swift */,
+				DF3145D32539DE5500B1087C /* NetworkService.swift */,
+				DF3145D62539E23B00B1087C /* StatusViewController.swift */,
+				DF3145D92539E30000B1087C /* Observable.swift */,
 			);
 			path = "Whoosh QR Scanner";
 			sourceTree = "<group>";
@@ -204,9 +213,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF3145D42539DE5500B1087C /* NetworkService.swift in Sources */,
 				DF3145CA2539D8F100B1087C /* Configuration.swift in Sources */,
 				DF3145AA2539D1F200B1087C /* AppDelegate.swift in Sources */,
+				DF3145DA2539E30000B1087C /* Observable.swift in Sources */,
 				DF3145C32539D4BE00B1087C /* ScannerViewController.swift in Sources */,
+				DF3145D72539E23B00B1087C /* StatusViewController.swift in Sources */,
 				DF3145CD2539D96300B1087C /* Scooter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
