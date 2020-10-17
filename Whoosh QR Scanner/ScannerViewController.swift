@@ -148,18 +148,26 @@ class ScannerViewController: UIViewController {
         case .authorized:
             break
         case .notDetermined:
-            AVCaptureDevice.requestAccess(for: .video) { (_) in
-                return
+            AVCaptureDevice.requestAccess(for: .video) { [weak self] (granted) in
+                if !granted {
+                    DispatchQueue.main.async {
+                        self?.showOpenSettingsAlert()
+                    }
+                }
             }
         case .denied, .restricted:
-            let ac = UIAlertController(title: "Необходим доступ к камере", message: "Приложение работает только при наличии доступа к камере, перейдите в настройки и откройте доступ к камере!", preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "Перейти в настройки", style: .default, handler: { [weak self] (_) in
-                self?.openSettings()
-            }))
-            present(ac, animated: true)
+            showOpenSettingsAlert()
         @unknown default:
             fatalError()
         }
+    }
+    
+    private func showOpenSettingsAlert() {
+        let ac = UIAlertController(title: "Необходим доступ к камере", message: "Приложение работает только при наличии доступа к камере, перейдите в настройки и откройте доступ к камере!", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Перейти в настройки", style: .default, handler: { [weak self] (_) in
+            self?.openSettings()
+        }))
+        present(ac, animated: true)
     }
     
     /// Метод по переходу в настройки для получения доступа к камере
