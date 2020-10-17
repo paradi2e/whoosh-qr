@@ -32,6 +32,7 @@ class ScannerViewController: UIViewController {
         
         view.backgroundColor = UIColor.black
         checkInternet()
+        checkAutorization()
         configureSession()
     }
     
@@ -140,6 +141,32 @@ class ScannerViewController: UIViewController {
     private func openStatusController() {
         let statusController = StatusViewController()
         navigationController?.pushViewController(statusController, animated: true)
+    }
+    
+    private func checkAutorization() {
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
+        case .authorized:
+            break
+        case .notDetermined:
+            AVCaptureDevice.requestAccess(for: .video) { (_) in
+                return
+            }
+        case .denied, .restricted:
+            let ac = UIAlertController(title: "Необходим доступ к камере", message: "Приложение работает только при наличии доступа к камере, перейдите в настройки и откройте доступ к камере!", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Перейти в настройки", style: .default, handler: { [weak self] (_) in
+                self?.openSettings()
+            }))
+            present(ac, animated: true)
+        @unknown default:
+            fatalError()
+        }
+    }
+    
+    /// Метод по переходу в настройки для получения доступа к камере
+    private func openSettings() {
+        guard let url = URL(string: UIApplication.openSettingsURLString)
+        else { return }
+        UIApplication.shared.open(url)
     }
 }
 
