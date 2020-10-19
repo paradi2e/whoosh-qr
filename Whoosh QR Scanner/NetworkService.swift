@@ -10,19 +10,18 @@ import Foundation
 
 class NetworkService {
     
-    let headers: HTTPHeaders = [
+    private let headers: HTTPHeaders = [
         "x-api-key": Configuration.apiKey
     ]
     
-    let parameters: Parameters = [
-        "code": Configuration.scooterNumber
-    ]
+    private let getInfoPath: String = "/challenge/getinfo"
     
-    func request() {
+    func request(_ scotterNumber: String) {
+        let url = Configuration.baseUrl + getInfoPath
         AF.request(
-            Configuration.requestUrl,
+            url,
             method: .get,
-            parameters: parameters,
+            parameters: ["code": scotterNumber],
             headers: headers
         ).responseData { (response) in
             guard let data = response.value else { return }

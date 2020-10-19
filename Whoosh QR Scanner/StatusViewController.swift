@@ -12,9 +12,22 @@ class StatusViewController: UIViewController {
 
     // MARK: - Private properties
     
+    private let scooterNumber: String
+    private let heading = UILabel()
     private let status = UILabel()
     private let comment = UILabel()
 
+    // MARK: - Init
+    
+    init(_ scooterNumber: String) {
+        self.scooterNumber = scooterNumber
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     // MARK: - Lifecycle ViewController
     
     override func viewDidLoad() {
@@ -30,6 +43,7 @@ class StatusViewController: UIViewController {
     
     private func configure() {
         configureRequest()
+        configureHeading()
         configureStatus()
         configureComment()
         setupTexts()
@@ -48,7 +62,19 @@ class StatusViewController: UIViewController {
     
     private func configureRequest() {
         let service = NetworkService()
-        service.request()
+        service.request(scooterNumber)
+    }
+    
+    private func configureHeading() {
+        heading.text = scooterNumber
+        heading.textAlignment = .center
+        heading.textColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
+        heading.font = UIFont.systemFont(ofSize: 20.0, weight: .bold)
+        view.addSubview(heading)
+        heading.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().offset(100.0)
+        }
     }
     
     private func configureStatus() {

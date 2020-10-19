@@ -38,7 +38,6 @@ class ScannerViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         if (captureSession?.isRunning == false) {
             captureSession.startRunning()
         }
@@ -119,27 +118,24 @@ class ScannerViewController: UIViewController {
     /// При успешном считывании QR-кода
     /// - Parameter code: стринговое содержимое QR-кода
     private func success(code: String) {
-        let wordToRemove = Configuration.filterString
-        var number = code
-        // удаляем из строки всё, кроме кода самоката
-        if let range = number.range(of: wordToRemove) {
-            number.removeSubrange(range)
-        }
-        Configuration.scooterNumber = number
-        let ac = UIAlertController(title: "Самокат обнаружен", message: "Это самокат номер \(number)", preferredStyle: .alert)
+        checkInternet()
+        let queryItems = URLComponents(string: code)?.queryItems
+        guard let scooterNumber = queryItems?.filter({$0.name == "scooter_code"}).first?.value else { return }
+        let ac = UIAlertController(title: "Самокат обнаружен", message: "Это самокат номер \(scooterNumber)", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Cканировать другой QR-code", style: .cancel, handler: { [weak self] (_) in
             ac.dismiss(animated: true, completion: nil)
             self?.captureSession.startRunning()
         }))
         ac.addAction(UIAlertAction(title: "Получить статус?", style: .default, handler: { [weak self] (_) in
-            self?.openStatusController()
+            self?.openStatusController(scooterNumber)
         }))
         present(ac, animated: true)
     }
     
     /// Открывается контроллер с двумя лейблами о состоянии самоката
-    private func openStatusController() {
-        let statusController = StatusViewController()
+    private func openStatusController(_ scooterNumber: String) {
+        checkInternet()
+        let statusController = StatusViewController(scooterNumber)
         navigationController?.pushViewController(statusController, animated: true)
     }
     

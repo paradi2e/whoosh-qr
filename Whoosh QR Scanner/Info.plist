@@ -25,7 +25,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>NSCameraUsageDescription</key>
-	<string>I NEED YOUR CAMERA! </string>
+	<string>Whoosh QR need access to your camera for scanning QR-code</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
