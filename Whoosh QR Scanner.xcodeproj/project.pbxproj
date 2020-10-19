@@ -3,27 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7EDCEAC100C17516ECC675B /* Pods_Whoosh_QR_Scanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF1D41A40BACB2F89CCC32A /* Pods_Whoosh_QR_Scanner.framework */; };
 		DF3145AA2539D1F200B1087C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145A92539D1F200B1087C /* AppDelegate.swift */; };
-		DF3145AC2539D1F200B1087C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145AB2539D1F200B1087C /* SceneDelegate.swift */; };
-		DF3145AE2539D1F200B1087C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145AD2539D1F200B1087C /* ViewController.swift */; };
-		DF3145B12539D1F300B1087C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF3145AF2539D1F300B1087C /* Main.storyboard */; };
 		DF3145B32539D1F700B1087C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF3145B22539D1F700B1087C /* Assets.xcassets */; };
 		DF3145B62539D1F700B1087C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF3145B42539D1F700B1087C /* LaunchScreen.storyboard */; };
+		DF3145C32539D4BE00B1087C /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145C22539D4BE00B1087C /* ScannerViewController.swift */; };
+		DF3145CA2539D8F100B1087C /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145C92539D8F100B1087C /* Configuration.swift */; };
+		DF3145CD2539D96300B1087C /* Scooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145CC2539D96300B1087C /* Scooter.swift */; };
+		DF3145D42539DE5500B1087C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145D32539DE5500B1087C /* NetworkService.swift */; };
+		DF3145D72539E23B00B1087C /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145D62539E23B00B1087C /* StatusViewController.swift */; };
+		DF3145DA2539E30000B1087C /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145D92539E30000B1087C /* Observable.swift */; };
+		DF3145DD2539F40A00B1087C /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3145DC2539F40900B1087C /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3DF1D41A40BACB2F89CCC32A /* Pods_Whoosh_QR_Scanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whoosh_QR_Scanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		637E168FA252387B92A2554F /* Pods-Whoosh QR Scanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whoosh QR Scanner.debug.xcconfig"; path = "Target Support Files/Pods-Whoosh QR Scanner/Pods-Whoosh QR Scanner.debug.xcconfig"; sourceTree = "<group>"; };
+		7269B7437F6FC6BD8C4386CB /* Pods-Whoosh QR Scanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whoosh QR Scanner.release.xcconfig"; path = "Target Support Files/Pods-Whoosh QR Scanner/Pods-Whoosh QR Scanner.release.xcconfig"; sourceTree = "<group>"; };
 		DF3145A62539D1F200B1087C /* Whoosh QR Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Whoosh QR Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3145A92539D1F200B1087C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DF3145AB2539D1F200B1087C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DF3145AD2539D1F200B1087C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DF3145B02539D1F300B1087C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF3145B22539D1F700B1087C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF3145B52539D1F700B1087C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF3145B72539D1F700B1087C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF3145C22539D4BE00B1087C /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		DF3145C92539D8F100B1087C /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		DF3145CC2539D96300B1087C /* Scooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scooter.swift; sourceTree = "<group>"; };
+		DF3145D32539DE5500B1087C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		DF3145D62539E23B00B1087C /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		DF3145D92539E30000B1087C /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		DF3145DC2539F40900B1087C /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7EDCEAC100C17516ECC675B /* Pods_Whoosh_QR_Scanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11656A0D4BE9B3A005994D7F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DF1D41A40BACB2F89CCC32A /* Pods_Whoosh_QR_Scanner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		71461B982720476715438348 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				637E168FA252387B92A2554F /* Pods-Whoosh QR Scanner.debug.xcconfig */,
+				7269B7437F6FC6BD8C4386CB /* Pods-Whoosh QR Scanner.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DF31459D2539D1F200B1087C = {
 			isa = PBXGroup;
 			children = (
 				DF3145A82539D1F200B1087C /* Whoosh QR Scanner */,
 				DF3145A72539D1F200B1087C /* Products */,
+				71461B982720476715438348 /* Pods */,
+				11656A0D4BE9B3A005994D7F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,12 +89,16 @@
 			isa = PBXGroup;
 			children = (
 				DF3145A92539D1F200B1087C /* AppDelegate.swift */,
-				DF3145AB2539D1F200B1087C /* SceneDelegate.swift */,
-				DF3145AD2539D1F200B1087C /* ViewController.swift */,
-				DF3145AF2539D1F300B1087C /* Main.storyboard */,
 				DF3145B22539D1F700B1087C /* Assets.xcassets */,
-				DF3145B42539D1F700B1087C /* LaunchScreen.storyboard */,
+				DF3145C92539D8F100B1087C /* Configuration.swift */,
 				DF3145B72539D1F700B1087C /* Info.plist */,
+				DF3145B42539D1F700B1087C /* LaunchScreen.storyboard */,
+				DF3145D32539DE5500B1087C /* NetworkService.swift */,
+				DF3145D92539E30000B1087C /* Observable.swift */,
+				DF3145DC2539F40900B1087C /* Reachability.swift */,
+				DF3145C22539D4BE00B1087C /* ScannerViewController.swift */,
+				DF3145CC2539D96300B1087C /* Scooter.swift */,
+				DF3145D62539E23B00B1087C /* StatusViewController.swift */,
 			);
 			path = "Whoosh QR Scanner";
 			sourceTree = "<group>";
@@ -74,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DF3145BA2539D1F700B1087C /* Build configuration list for PBXNativeTarget "Whoosh QR Scanner" */;
 			buildPhases = (
+				2DD895CF639E0B3247396FC1 /* [CP] Check Pods Manifest.lock */,
 				DF3145A22539D1F200B1087C /* Sources */,
 				DF3145A32539D1F200B1087C /* Frameworks */,
 				DF3145A42539D1F200B1087C /* Resources */,
+				3739E7D2A1F16EF71BBED000 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,34 +164,72 @@
 			files = (
 				DF3145B62539D1F700B1087C /* LaunchScreen.storyboard in Resources */,
 				DF3145B32539D1F700B1087C /* Assets.xcassets in Resources */,
-				DF3145B12539D1F300B1087C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2DD895CF639E0B3247396FC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Whoosh QR Scanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3739E7D2A1F16EF71BBED000 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Whoosh QR Scanner/Pods-Whoosh QR Scanner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Whoosh QR Scanner/Pods-Whoosh QR Scanner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Whoosh QR Scanner/Pods-Whoosh QR Scanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DF3145A22539D1F200B1087C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF3145AE2539D1F200B1087C /* ViewController.swift in Sources */,
+				DF3145D42539DE5500B1087C /* NetworkService.swift in Sources */,
+				DF3145CA2539D8F100B1087C /* Configuration.swift in Sources */,
 				DF3145AA2539D1F200B1087C /* AppDelegate.swift in Sources */,
-				DF3145AC2539D1F200B1087C /* SceneDelegate.swift in Sources */,
+				DF3145DA2539E30000B1087C /* Observable.swift in Sources */,
+				DF3145C32539D4BE00B1087C /* ScannerViewController.swift in Sources */,
+				DF3145D72539E23B00B1087C /* StatusViewController.swift in Sources */,
+				DF3145DD2539F40A00B1087C /* Reachability.swift in Sources */,
+				DF3145CD2539D96300B1087C /* Scooter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DF3145AF2539D1F300B1087C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DF3145B02539D1F300B1087C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DF3145B42539D1F700B1087C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -283,11 +359,12 @@
 		};
 		DF3145BB2539D1F700B1087C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 637E168FA252387B92A2554F /* Pods-Whoosh QR Scanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N58RDF6FU9;
+				DEVELOPMENT_TEAM = 66B6DJ7RZU;
 				INFOPLIST_FILE = "Whoosh QR Scanner/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,11 +379,12 @@
 		};
 		DF3145BC2539D1F700B1087C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7269B7437F6FC6BD8C4386CB /* Pods-Whoosh QR Scanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N58RDF6FU9;
+				DEVELOPMENT_TEAM = 66B6DJ7RZU;
 				INFOPLIST_FILE = "Whoosh QR Scanner/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
